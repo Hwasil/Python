@@ -1,0 +1,141 @@
+0513 과제 [문제분석]
+
+p.247
+1번
+1. 조건
+1부터 100까지의 난수 발생 -> num.txt 파일 생성
+생성된 파일을 읽어 각 학생의 평균을 avg.txt 파일에 출력
+
+2. 알고리즘
+improt random 
+for i in range(30) :
+    num.append(random.randint(1,100))
+
+f=open('num.txt','w') 파일 생성하여 저장
+f.close()
+
+f=open('num.txt','r') 
+lines=f.readlines()
+
+for num in lines :
+    scorelist=num.split()
+
+    sum=0
+
+    for i in range(0,5) :
+        sum=sum+int(scorelist[i])
+    
+    for j in range(1,6) :
+        j=j+1
+    
+    print(j+"번째 학생의 평균 : ",sum/5)
+
+f.close()
+
+2번
+1. 조건
+score.txt 파일에 있는 4명의 학생의 국, 수, 영 성적 자료를 읽어 -> 학생별 총점과 평균을 구함
+국수영 과목의 전체 평균을 구한 후에 화면과 report.txt 파일에 출력
+
+2. 알고리즘
+f=open("score.txt",'r')
+lines=f.readlines() 
+
+for score in lines : 
+    scorlist=score.split() 
+    name=scorlist[0] 
+
+    sum=0
+
+    for i in range(1,3) :
+        sum=sum+int(scorlist[i])
+    print(name,'총점 :',sum,"평균",sum/3)
+   
+    txts=f.read() 
+f.close()
+
+f=open("report.txt",'w')
+f.write(txts) 
+f.close()
+
+p.248-3
+1. 조건
+score1.txt 파일에 있는 10명의 평균자료를 읽어 등급을 구한 후
+-> 화면과 report1.txt 파일에 출력
+
+2. 알고리즘
+f=open("score1.txt",'r')
+lines=f.readlines()
+
+for score in lines :
+    scorelist=score.split()
+
+    name=scorelist[0]
+
+for i in range(4) :
+    if scorelist[1]>90 :
+        print(name+"A")
+
+    elif 80<scorelist[1]<89 :
+        print(name+"B")
+
+    elif 70<scorelist[1]<79 :
+        print(name+"C")
+
+    elif 60<scorelist[1]<69 :
+        print(name+"D")
+
+    else :
+        print(name+"E")
+
+    i=i+1
+
+txts=f.read()
+f.close()
+
+f=open("report1.txt",'w')
+f.write(txts) 
+f.close()
+
+p.249-4
+1. 조건
+members.txt 파일에 있는 5명의 회원 정보를 읽어 직업과 등록금액을 구하고
+-> 결과는 화면과 report2.txt 파일로 출력
+
+
+2. 알고리즘
+f=open("members.txt",'r')
+read=f.readlines() 
+
+for member in read : 
+    memberlist=member.split(',') 
+
+    name=memberlist[0]
+
+for i in range(5) :
+    if (memberlist[1]=="학생") :
+        amount=15000
+    
+    elif (memberlist[1]=="교수") :
+        amount=30000
+
+    elif (memberlist[1]=="직원") :
+        amount=30000
+
+    elif (memberlist[1]=="일반") :
+        amount=50000
+    
+    i=i+1
+
+sum=0
+for j in range(5) :
+    sum=amount*memberlist[2]
+    i=i+1
+
+print(name+" : 등록금액",sum)
+txts=f.read()
+f.close()
+
+f=open("report2.txt",'w')
+f.write(txts) 
+f.close()
