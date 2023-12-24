@@ -1,0 +1,99 @@
+0526 과제 [문제 분석]
+
+p.266 8-2-3
+#함수
+list=[] 
+
+def findprime(a,b) :
+    for i in range (a,b+1) :
+        for j in range(1,i+1) :
+            if i%j==0 :
+                list.append(i) #약수를 리스트에 추가
+                j=j+1
+                i=i+1
+    return list
+
+#메인 프로그램
+a=int(input("첫 번째 숫자 : "))
+b=int(input("두 번째 숫자 : "))
+
+list=findprime(a,b)
+
+if list<=2 :
+    print("두 숫자 사이의 소수 : ",list)
+    print("소수의 개수 : ",)
+
+p.273 8-3-1
+1. find.py 모듈
+def findMax(a,b,c) :
+   if a>b :
+     biggest=a
+   else :
+     biggest=b
+   if biggest<c :
+     biggest=c
+   retrun biggest
+
+def findMin(a,b,c) :
+   if a>b :
+     smallest=b
+   else :
+     smallest=a
+   if smallest>c :
+     smallest=c
+   retrun smallest
+
+def findSum(a,b,c) :
+     return a+b+c
+
+2. 메인 프로그램
+import find
+  
+a=int(input("첫 번째 숫자 : "))
+b=int(input("두 번째 숫자 : "))
+c=int(input("세 번째 숫자 : "))
+
+print("가장 큰 수 (findMax()) : ",find.findMax(a,b,c)) #모듈 호출
+print("가장 작은 수 (findMin()) : ",find.findMin(a,b,c))
+print("숫자의 합 (findSum()) : ",find.findSum(a,b,c))
+
+
+p.275 
+1번
+#함수
+sum=0
+
+def allSum(a,b) :
+  for i in range(a,b+1) :
+     sum=sum+i
+     i=i+1
+  return sum
+
+#메인 프로그램
+a=int(input("첫 번째 숫자 : "))
+b=int(input("두 번째 숫자 : "))
+
+sum=allSum(a,b)
+
+print("입력한 두 정수 사이의 정수 합 : ",sum)
+
+2번
+#함수
+dan=0
+
+def gugu(a) :
+   for i in range(1,10) :
+    dan=a*i
+    dansum=dansum+dan
+    i=i+1
+    return dansum
+
+print("==",a,"단==")
+print(a,"*",i"=",dan)
+
+#메인 프로그램
+a=int(input("정수 입력 : "))
+
+dansum=gugu(a)
+print("구구단 결과의 합 : ",dansum)
+

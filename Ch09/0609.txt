@@ -1,0 +1,34 @@
+p289_1 [문제 분석]
+Box() class 작성 -> 생성자 메소드 활용
+
+1. 가로, 세로, 높이를 입력 받기
+2. 박스의 부피를 구하는 클래스
+   -> 객체 호출 4번(b1, b2, b3, b4)
+
+알고리즘
+class Box() :
+    def __init__(self,width,depth,heith) :
+        부피 구하는 공식
+
+    def return :
+        return 가로, 세로, 높이, 부피
+
+b1=Box() # 객체 생성
+b2=Box()
+b3=Box()
+b4=Box()
+
+w,d,h,v=b1.result()
+print('가로 :',w,'세로 :',d,'높이 :',h,'부피 :',v)
+
+w,d,h,v=b2.result(10)
+print
+
+w,d,h,v=b3.result(10,20)
+print
+
+w,d,h,v=b4.result(10,20,30)
+print
+
+
+

@@ -1,0 +1,71 @@
+문제분석
+
+[문제1]
+1. 요구사항
+- 1) 친구 등록 2) 검색 3) 종료 -> 친구 이름으로 검색한 후 연락처를 출력
+- 딕셔너리 자료 구조 사용
+- 찾는 친구가 있으면 연락처를 출력, 엇으면 에러 메시지 출력
+
+2. 알고리즘
+1, 2, 3 입력
+name_list=[] # 빈 리스트 2개 생성
+phone_list=[]
+
+While True :
+    만약 1번이라면 
+        input 이름 -> append.name list
+              전화번호 -> append.phone list
+        dict1=dict(zip(name list,phone list)) #2개의 리스트를 하나의 사전으로 만듦
+
+    만약 2번이라면 
+        input  친구 이름 검색
+            만약 
+
+    만약 3번이라면
+        break
+        
+
+[문제2]
+1. 요구사항 (암호 admine)
+- 암호를 입력 받아 인증 처리하는 프로그램
+- 암호가 맞으면 환영합니다 출력 후 종료
+         틀리면 암호가 틀립니다 출력하고 다시 입력
+- 3번 틀리면 접속 거부 메시지 출력 후 종료
+
+2. 알고리즘
+pw = 비밀번호 입력
+i=0
+
+While True :
+    if pw!=admine :
+        print('암호가 틀립니다.')
+        i=i+1
+        continue
+
+        if i==3 :
+            print('시도횟수 초과')
+            break
+
+    if pw== admine :
+        print('환영합니다.')
+        break
+
+[문제3]
+1. 요구사항
+- 1-45숫자 중 총 6개의 임의의 숫자로 구성됨
+- while 반복문 사용
+- 리스트 자료구조 사용 : 리스트는 중복 가능 하지만 임의의 번호 중복 불가
+- len() 함수 활용
+- 랜덤 수 오름차순 정렬
+
+2. 알고리즘
+print('로또 프로그램 시작')
+
+import random
+lotto=[] # 빈리스트 생성
+
+while True :
+    lotto.append(random.randint(1,45)) 
+
+    if len(lotto)==6 :
+    break
