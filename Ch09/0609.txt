@@ -29,6 +29,3 @@ print
 
 w,d,h,v=b4.result(10,20,30)
 print
-
-
-
