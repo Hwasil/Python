@@ -1,0 +1,20 @@
+0408 과제 p.158
+
+4-2-4 [문제분석]
+알고리즘
+1. 정수 입력값 받기 (multi)
+sum=0
+
+for i in range (multi,1001,multi) : #range(x,y,z) : #x부터 y-1까지, z씩 증가
+   sum=multi+i
+print (multi,sum)
+
+
+4-2-5 [문제분석]
+알고리즘
+1. num 정수 입력 받기
+times=1 #0을 곱하면 0, 1은 곱해도 상관x
+
+for i in range (num,0,-1) :
+    times=times*i
+print(num, times)
