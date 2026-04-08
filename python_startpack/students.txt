@@ -1,0 +1,5 @@
+a, {'kor': 20, 'eng': 30, 'math': 60}
+b, {'kor': 60, 'eng': 250, 'math': 50}
+c, {'kor': 30, 'eng': 90, 'math': 80}
+d, {'kor': 60, 'eng': 50, 'math': 90}
+e, {'kor': 60, 'eng': 80, 'math': 40}
