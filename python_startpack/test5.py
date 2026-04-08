@@ -1,4 +1,4 @@
-#26.04.08
+# 26.04.08
 # 클래스
 class Student:
     def __init__(self, name, score):
